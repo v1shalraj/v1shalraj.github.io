@@ -1,61 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Vishal Raj | Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body { font-family: Arial; margin: 0; background: #f4f4f4; }
-header { background: #000; color: #fff; padding: 30px; text-align: center; }
-section { padding: 30px; max-width: 900px; margin: auto; }
-.card { background: #fff; padding: 20px; margin: 15px 0; border-radius: 10px; }
-footer { background: #000; color: #fff; text-align: center; padding: 10px; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    background: #111;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(120deg, #000, #222);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: slideUp 1s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #00bcd4;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideUp {
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
 </style>
 </head>
 
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<a href="Vishal_Raj_Resume.pdf" class="btn" download>Resume</a>
+</nav>
+
 <header>
 <h1>Vishal Raj</h1>
-<p>Aspiring Data Analyst | Python | SQL</p>
-</header>
+<p>Aspiring Data Analyst | Python | SQL | Power BI</p>
 
-<section>
-
-<div class="card">
-<h2>About Me</h2>
-<p>I am an aspiring Data Analyst skilled in Python, SQL, and data visualization.</p>
-</div>
-
-<div class="card">
-<h2>Skills</h2>
-<ul>
-<li>Python, Pandas</li>
-<li>SQL, Excel</li>
-<li>Power BI</li>
-<li>HTML, CSS</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Projects</h2>
-<p><b>Plant Shop Sales Analysis</b><br>
-Sales analysis and customer insights using Python.</p>
-
-<p><b>Daily Activity Dashboard</b><br>
-Web-based reporting dashboard.</p>
-</div>
-
-<div class="card">
-<h2>Contact</h2>
-<p>Email: lapasus79@gmail.com</p>
-<p>GitHub: v1shalraj</p>
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Vishal Raj</p>
-</footer>
-
-</body>
-</html>
+<p>
+<a href="https://github.com/v1shalraj" target="_blank" style="color:#00bcd4;">GitHub</a> |
+<a href="h
