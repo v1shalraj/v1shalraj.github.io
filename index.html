@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vishal Raj | Portfolio</title>
+<title>Vishal Raj | Data Analyst Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #f4f4f4;
     scroll-behavior: smooth;
 }
@@ -20,6 +20,7 @@ nav {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 nav a {
     color: white;
@@ -35,14 +36,19 @@ nav a:hover {
 header {
     background: linear-gradient(120deg, #000, #222);
     color: white;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
-    animation: fadeIn 1.5s;
+}
+header h1 {
+    font-size: 40px;
+}
+header p {
+    font-size: 18px;
 }
 
 /* SECTIONS */
 section {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
 }
@@ -54,9 +60,7 @@ section {
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    animation: slideUp 1s;
 }
-
 .card:hover {
     transform: scale(1.02);
     transition: 0.3s;
@@ -70,6 +74,7 @@ section {
     color: white;
     border-radius: 6px;
     text-decoration: none;
+    margin-top: 10px;
 }
 .btn:hover {
     background: #00bcd4;
@@ -82,78 +87,136 @@ footer {
     text-align: center;
     padding: 15px;
 }
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes slideUp {
-    from {transform: translateY(30px); opacity: 0;}
-    to {transform: translateY(0); opacity: 1;}
-}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-<a href="Vishal_Raj_Resume.pdf" class="btn" download>Resume</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
 </nav>
 
+<!-- HEADER -->
 <header>
-<h1>Vishal Raj</h1>
-<p>Aspiring Data Analyst | Python | SQL | Power BI</p>
-
-<p>
-<a href="https://github.com/v1shalraj" target="_blank" style="color:#00bcd4;">GitHub</a> |
-<a href="https://linkedin.com/in/YOUR-LINK" target="_blank" style="color:#00bcd4;">LinkedIn</a>
-</p>
+    <h1>Vishal Raj</h1>
+    <p>Aspiring Data Analyst | Python | SQL | Power BI</p>
+    <p>
+        <a href="https://github.com/v1shalraj" target="_blank" style="color:#00bcd4;">GitHub</a> |
+        <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" style="color:#00bcd4;">LinkedIn</a>
+    </p>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
-<div class="card">
-<h2>👋 About Me</h2>
-<p>
-I am an aspiring Data Analyst passionate about data analysis, dashboards, and business insights.
-I work with Python, SQL, and Power BI to solve real-world problems.
-</p>
-</div>
+    <div class="card">
+        <h2>👋 About Me</h2>
+        <p>
+            Aspiring data professional with a strong foundation in data analytics,
+            machine learning, and programming. Experienced in applying ML algorithms,
+            data preprocessing, and deploying models using Streamlit.
+            Passionate about solving real-world problems using data.
+        </p>
+    </div>
 </section>
 
+<!-- SKILLS -->
+<section id="skills">
+    <div class="card">
+        <h2>🛠 Skills</h2>
+        <p><b>Programming:</b> Python (Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow)</p>
+        <p><b>Data Analysis & Visualization:</b> Excel, Power BI, Seaborn, Plotly</p>
+        <p><b>Machine Learning:</b> Regression, Classification, Clustering, NLP</p>
+        <p><b>Deep Learning:</b> ANN, CNN, RNN (TensorFlow 2.x)</p>
+        <p><b>Database:</b> MS SQL Server</p>
+        <p><b>Tools:</b> GitHub, Streamlit, PowerPoint, Google Slides</p>
+        <p><b>Statistics:</b> Descriptive & Inferential Statistics</p>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="card">
+        <h2>💼 Experience</h2>
+
+        <h3>Data Analyst Intern – SCALEUP</h3>
+        <p><i>Nov 2024 – Mar 2025 | Calicut</i></p>
+        <ul>
+            <li>Developed daily report website and application</li>
+            <li>Cleaned and preprocessed business data</li>
+            <li>Assisted IT department with operational data tasks</li>
+        </ul>
+
+        <h3>Data Scientist Intern – DATASPARK</h3>
+        <p><i>Jun 2023 – Mar 2024 | Calicut</i></p>
+        <ul>
+            <li>Performed extensive data cleaning and preprocessing</li>
+            <li>Built and deployed ML models using Python & Streamlit</li>
+            <li>Delivered actionable insights for business decisions</li>
+        </ul>
+
+        <h3>Travel Consultant – Trip.v1be</h3>
+        <p><i>2020 – 2022</i></p>
+        <ul>
+            <li>Handled client interactions and hotel bookings</li>
+            <li>Managed ticket reservations and telecalling</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects">
-<div class="card">
-<h2>📊 Projects</h2>
+    <h2 style="text-align:center;">📊 Projects</h2>
 
-<h3>Plant Shop Sales Analysis</h3>
-<p>Sales trends, customer segmentation, and profit analysis.</p>
-<p><b>Tools:</b> Python, Pandas, Power BI</p>
-<a href="https://github.com/v1shalraj" target="_blank">View Project</a>
+    <div class="card">
+        <h3>Ticket Cancellation Prediction</h3>
+        <p>Built an ML model achieving <b>96.29% accuracy</b> to predict ticket cancellations.</p>
+        <p><b>Tools:</b> Python, Scikit-learn, Streamlit</p>
+        <a href="https://github.com/v1shalraj" target="_blank" class="btn">View Project</a>
+    </div>
 
-<hr>
+    <div class="card">
+        <h3>Plant Shop Sales Analysis</h3>
+        <p>Analyzed sales trends, customer segmentation, and profit insights.</p>
+        <p><b>Tools:</b> Python, Pandas, Power BI</p>
+        <a href="https://github.com/v1shalraj" target="_blank" class="btn">View Project</a>
+    </div>
 
-<h3>Daily Activity Dashboard</h3>
-<p>Web-based dashboard for operational reporting.</p>
-<p><b>Tools:</b> HTML, CSS, JavaScript</p>
-<a href="https://github.com/v1shalraj" target="_blank">View Project</a>
-
-</div>
+    <div class="card">
+        <h3>Daily Activity Dashboard</h3>
+        <p>Web-based dashboard for daily operational reporting.</p>
+        <p><b>Tools:</b> HTML, CSS, JavaScript</p>
+        <a href="https://github.com/v1shalraj" target="_blank" class="btn">View Project</a>
+    </div>
 </section>
 
+<!-- RESUME -->
+<section id="resume">
+    <div class="card" style="text-align:center;">
+        <h2>📄 Resume</h2>
+        <a href="Vishal_Raj_Resume.jpg" target="_blank" class="btn">👀 View Resume</a>
+        <a href="Vishal_Raj_Resume.jpg" download class="btn">⬇ Download Resume</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-<div class="card">
-<h2>📞 Contact</h2>
-<p>Email: lapasus79@gmail.com</p>
-<p>GitHub: <a href="https://github.com/v1shalraj">v1shalraj</a></p>
-<p>LinkedIn: Add your link</p>
-</div>
+    <div class="card">
+        <h2>📞 Contact</h2>
+        <p>Email: vishalraaj725@gmail.com</p>
+        <p>Phone: +91 9747050825</p>
+        <p>GitHub: <a href="https://github.com/v1shalraj">v1shalraj</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vishal-raj-006805217">Vishal Raj</a></p>
+    </div>
 </section>
 
 <footer>
-<p>© 2026 Vishal Raj</p>
+    <p>© 2026 Vishal Raj</p>
 </footer>
 
 </body>
