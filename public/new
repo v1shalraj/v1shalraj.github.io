@@ -5,120 +5,153 @@
 <title>Vishal Raj | Data Analyst Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Portfolio of Vishal Raj - Data Analyst specializing in Python, SQL, and Business Intelligence.">
+<meta property="og:title" content="Vishal Raj | Data Analyst Portfolio">
+<meta property="og:description" content="Exploring the intersection of Raw Data and Business Intelligence through Python and SQL.">
+<meta property="og:type" content="website">
+
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f8fafc;
     scroll-behavior: smooth;
-    color: #333;
+    color: #1e293b;
 }
 
 /* NAVBAR */
 nav {
-    background: #111;
-    padding: 15px;
+    background: #0f172a;
+    padding: 18px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 nav a {
-    color: white;
+    color: #f1f5f9;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 nav a:hover {
-    color: #00bcd4;
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #000, #222);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 header h1 {
-    font-size: 45px;
+    font-size: 48px;
     margin-bottom: 10px;
+    letter-spacing: -1px;
 }
 header p {
-    font-size: 18px;
-    color: #bbb;
+    font-size: 20px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 10px auto;
 }
 
 /* SECTIONS */
 section {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 80px 20px;
+}
+h2 {
+    font-size: 28px;
+    border-left: 5px solid #38bdf8;
+    padding-left: 15px;
+    margin-bottom: 30px;
 }
 
-/* CARD */
+/* CARDS */
 .card {
     background: white;
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    padding: 35px;
+    margin: 25px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* PROJECT LAYOUT */
 .project-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
+    gap: 40px;
+    align-items: flex-start;
 }
-.project-text { flex: 1; min-width: 300px; }
-.project-img { flex: 1; min-width: 300px; text-align: center; }
-.project-img img { 
+.project-text { flex: 1.2; min-width: 300px; }
+.project-gallery { 
+    flex: 1; 
+    min-width: 300px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+.project-gallery img { 
     width: 100%; 
-    border-radius: 10px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 12px; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    background: #111;
+    padding: 12px 24px;
+    background: #0f172a;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     margin-top: 15px;
+    transition: 0.2s;
 }
 .btn:hover {
-    background: #00bcd4;
-    color: #111;
+    background: #38bdf8;
+    color: #0f172a;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #0f172a;
+    color: #0f172a;
 }
 
 .tag {
-    background: #e1f5fe;
-    color: #01579b;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    margin-right: 5px;
-    font-weight: bold;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-right: 8px;
+    font-weight: 600;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
+    background: #0f172a;
+    color: #94a3b8;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+    padding: 40px;
+    margin-top: 60px;
 }
 </style>
 </head>
@@ -136,115 +169,113 @@ footer {
 
 <header>
     <h1>Vishal Raj</h1>
-    <p>IT & Data Professional | Python | SQL | Full-Stack Analytics</p>
-    <p>
-        <a href="https://github.com/v1shalraj" target="_blank" style="color:#00bcd4; text-decoration:none;">GitHub</a> |
-        <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" style="color:#00bcd4; text-decoration:none;">LinkedIn</a>
-    </p>
+    <p>Data Analyst & ERP Solutions Expert</p>
+    <div style="margin-top: 20px;">
+        <a href="https://github.com/v1shalraj" target="_blank" style="color:#38bdf8; text-decoration:none; font-weight:bold;">GitHub</a> • 
+        <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" style="color:#38bdf8; text-decoration:none; font-weight:bold;">LinkedIn</a>
+    </div>
 </header>
 
 <section id="about">
     <div class="card">
         <h2>👋 About Me</h2>
         <p>
-            Aspiring data professional with a strong foundation in data analytics,
-            machine learning, and full-stack development. I bridge the gap between 
-            raw business data and actionable insights by building custom software 
-            solutions that collect, process, and visualize information in real-time.
+            I specialize in transforming complex business data into actionable insights. By bridging the gap between <b>Full-Stack Development</b> and <b>Data Science</b>, I build custom tools that automate workflows and provide real-time Profit & Loss visualization. My goal is to help businesses make data-driven decisions that save time and money.
         </p>
     </div>
 </section>
 
 <section id="skills">
     <div class="card">
-        <h2>🛠 Skills</h2>
-        <p><b>Data Analytics:</b> Python (Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow)</p>
-        <p><b>Full-Stack:</b> React Native, Firebase, NoSQL, HTML/CSS/JS</p>
-        <p><b>Visualization & BI:</b> Power BI, Excel, Seaborn, Profit/Loss Engines</p>
-        <p><b>Machine Learning:</b> Regression, Classification, NLP, Deep Learning (ANN/CNN)</p>
-        <p><b>Database:</b> MS SQL Server, Firestore (Cloud DB)</p>
+        <h2>🛠 Technical Stack</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div>
+                <h4>Data Science</h4>
+                <p>Python (Pandas, Scikit-learn), SQL, Power BI, Excel Analytics</p>
+            </div>
+            <div>
+                <h4>Development</h4>
+                <p>React Native, Firebase, NoSQL, HTML/CSS/JavaScript</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="experience">
     <div class="card">
-        <h2>💼 Experience</h2>
+        <h2>💼 Professional Experience</h2>
 
         <h3>Data Analyst Intern – SCALEUP</h3>
         <p><i>Nov 2024 – Mar 2025 | Calicut</i></p>
         <ul>
-            <li>Developed daily report website and application to streamline communication.</li>
-            <li>Cleaned and preprocessed business data for operational efficiency.</li>
+            <li>Engineered a high-traffic daily reporting application to centralize business operations.</li>
+            <li>Optimized data pipelines, improving data cleaning speed for weekly stakeholder reports.</li>
         </ul>
 
         <h3>Data Scientist Intern – DATASPARK</h3>
         <p><i>Jun 2023 – Mar 2024 | Calicut</i></p>
         <ul>
-            <li>Built and deployed ML models using Python & Streamlit for predictive analytics.</li>
-            <li>Delivered actionable insights through extensive data cleaning and visualization.</li>
+            <li>Developed and deployed predictive ML models using Python & Streamlit.</li>
+            <li>Conducted exploratory data analysis (EDA) to identify key performance drivers for retail clients.</li>
         </ul>
     </div>
 </section>
 
 <section id="projects">
-    <h2 style="text-align:center; margin-bottom: 30px;">📊 Featured Projects</h2>
+    <h2 style="text-align:center; border:none; padding:0;">📊 Featured Projects</h2>
 
     <div class="card">
         <div class="project-container">
             <div class="project-text">
-                <h3>Rare Piston - Showroom ERP & Analytics 🏍️</h3>
-                <p>Developed a custom <b>Business Intelligence (BI)</b> system to replace paid ERP software, saving the client ₹12,000/year.</p>
+                <h3>Rare Piston - Enterprise BI Solution 🏍️</h3>
+                <p><b>Impact:</b> Replaced legacy paid software, reducing annual operational costs by ₹12,000.</p>
                 <ul>
-                    <li><b>P&L Engine:</b> Real-time profit calculation aggregating vehicle, service, and overhead costs.</li>
-                    <li><b>Cloud Architecture:</b> Secure Firebase integration for real-time NoSQL data & document storage.</li>
+                    <li>Developed a custom <b>P&L Engine</b> that aggregates service, spare parts, and labor costs for real-time margin tracking.</li>
+                    <li>Integrated <b>Cloud Firebase</b> for cross-device synchronization and secure inventory logging.</li>
                 </ul>
-                <div style="margin: 15px 0;">
-                    <span class="tag">React Native</span> <span class="tag">Firebase</span> <span class="tag">Analytics</span>
+                <div style="margin: 20px 0;">
+                    <span class="tag">React Native</span> <span class="tag">Firebase</span> <span class="tag">Cloud NoSQL</span>
                 </div>
-                <a href="https://github.com/v1shalraj/Rare_piston" target="_blank" class="btn">View Source Code</a>
+                <a href="https://github.com/v1shalraj/Rare_piston" target="_blank" class="btn">View Technical Architecture</a>
             </div>
-            <div class="project-img">
-                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/master/Screenshot%202026-02-10%20121723.png" alt="Rare Piston Dashboard">
+            <div class="project-gallery">
+                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston1.png" alt="Dashboard Core Metrics">
+                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston2.png" alt="Inventory Management View">
+                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston3.png" alt="Profit & Loss Report">
             </div>
         </div>
     </div>
 
     <div class="card">
-        <h3>Ticket Cancellation Prediction</h3>
-        <p>Built an ML model achieving <b>96.29% accuracy</b> to predict hotel/travel ticket cancellations.</p>
-        <span class="tag">Python</span> <span class="tag">Scikit-learn</span> <span class="tag">Streamlit</span>
+        <h3>Predictive Analytics: Ticket Cancellation</h3>
+        <p>Engineered a classification model with <b>96.29% accuracy</b> to mitigate revenue loss from cancellations.</p>
+        <span class="tag">Scikit-learn</span> <span class="tag">Random Forest</span> <span class="tag">Streamlit</span>
         <br>
-        <a href="https://github.com/v1shalraj" target="_blank" class="btn">View Project</a>
-    </div>
-
-    <div class="card">
-        <h3>Plant Shop Sales Analysis</h3>
-        <p>End-to-end analysis of sales trends and customer segmentation using Power BI dashboards.</p>
-        <span class="tag">Power BI</span> <span class="tag">Pandas</span> <span class="tag">Data Cleaning</span>
-        <br>
-        <a href="https://github.com/v1shalraj" target="_blank" class="btn">View Project</a>
+        <a href="https://github.com/v1shalraj" target="_blank" class="btn btn-outline">Analyze Model</a>
     </div>
 </section>
 
 <section id="resume">
-    <div class="card" style="text-align:center;">
-        <h2>📄 Resume</h2>
-        <a href="Resume.jpeg" target="_blank" class="btn">👀 View Resume</a>
-        <a href="Resume.jpeg" download class="btn">⬇ Download Resume</a>
+    <div class="card" style="text-align:center; background: #f1f5f9;">
+        <h2>📄 Career Summary</h2>
+        <p>Looking for my full resume? Download it below for a detailed look at my certifications and projects.</p>
+        <a href="Resume.jpeg" target="_blank" class="btn">👀 View Online</a>
+        <a href="Resume.jpeg" download class="btn" style="background:#38bdf8; color:#0f172a;">⬇ Download (.jpeg)</a>
     </div>
 </section>
 
 <section id="contact">
     <div class="card">
-        <h2>📞 Contact</h2>
-        <p>Email: vishalraaj725@gmail.com</p>
-        <p>Phone: +91 9747050825</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" style="color:#00bcd4;">Vishal Raj</a></p>
+        <h2>📞 Let's Connect</h2>
+        <p>I'm currently open to Data Analyst and Junior Data Scientist roles.</p>
+        <p><b>Email:</b> vishalraaj725@gmail.com</p>
+        <p><b>Location:</b> Calicut, India</p>
+        <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" class="btn">LinkedIn Profile</a>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Vishal Raj | Data Analyst Portfolio</p>
+    <p>© 2026 Vishal Raj | Data Driven Solutions</p>
 </footer>
 
 </body>
