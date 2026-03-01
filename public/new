@@ -5,277 +5,104 @@
 <title>Vishal Raj | Data Analyst Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Portfolio of Vishal Raj - Data Analyst specializing in Python, SQL, and Business Intelligence.">
-<meta property="og:title" content="Vishal Raj | Data Analyst Portfolio">
-<meta property="og:description" content="Exploring the intersection of Raw Data and Business Intelligence through Python and SQL.">
-<meta property="og:type" content="website">
-
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: #f8fafc;
-    scroll-behavior: smooth;
-    color: #1e293b;
-}
+:root { --primary: #0f172a; --accent: #38bdf8; --bg: #f8fafc; --card: #ffffff; }
+body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: #1e293b; line-height: 1.6; }
 
-/* NAVBAR */
-nav {
-    background: #0f172a;
-    padding: 18px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-nav a {
-    color: #f1f5f9;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 13px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-nav a:hover {
-    background: rgba(56, 189, 248, 0.2);
-    color: #38bdf8;
-}
+/* NAVIGATION */
+nav { background: var(--primary); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
+nav a:hover { color: var(--accent); }
 
 /* HEADER */
-header {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-}
-header p {
-    font-size: 20px;
-    color: #94a3b8;
-    max-width: 600px;
-    margin: 10px auto;
-}
+header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 20px; text-align: center; }
+header h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
+header p { font-size: 1.2rem; color: #94a3b8; margin: 10px 0; }
 
-/* SECTIONS */
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 80px 20px;
-}
-h2 {
-    font-size: 28px;
-    border-left: 5px solid #38bdf8;
-    padding-left: 15px;
-    margin-bottom: 30px;
-}
+/* LAYOUT */
+section { max-width: 1000px; margin: auto; padding: 60px 20px; }
+.card { background: var(--card); padding: 30px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
 
-/* CARDS */
-.card {
-    background: white;
-    padding: 35px;
-    margin: 25px 0;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border: 1px solid #e2e8f0;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
+/* PROJECT GALLERY */
+.project-gallery { display: flex; flex-direction: column; gap: 20px; margin-top: 25px; }
+.project-gallery img { width: 100%; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
 
-/* PROJECT LAYOUT */
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: flex-start;
-}
-.project-text { flex: 1.2; min-width: 300px; }
-.project-gallery { 
-    flex: 1; 
-    min-width: 300px; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 15px; 
-}
-.project-gallery img { 
-    width: 100%; 
-    border-radius: 12px; 
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border: 1px solid #f1f5f9;
-}
+.tag-container { margin: 15px 0; }
+.tag { background: #f1f5f9; color: #475569; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; margin-right: 8px; border: 1px solid #cbd5e1; }
 
-/* BUTTONS */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #0f172a;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 15px;
-    transition: 0.2s;
-}
-.btn:hover {
-    background: #38bdf8;
-    color: #0f172a;
-}
-.btn-outline {
-    background: transparent;
-    border: 2px solid #0f172a;
-    color: #0f172a;
-}
+.btn { display: inline-block; padding: 12px 24px; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: 0.2s; border: none; cursor: pointer; }
+.btn:hover { background: var(--accent); color: var(--primary); }
 
-.tag {
-    background: #f1f5f9;
-    color: #475569;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-    margin-right: 8px;
-    font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-    background: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 40px;
-    margin-top: 60px;
-}
+footer { background: var(--primary); color: #94a3b8; text-align: center; padding: 40px; margin-top: 40px; }
 </style>
 </head>
-
 <body>
 
 <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
 </nav>
 
 <header>
     <h1>Vishal Raj</h1>
-    <p>Data Analyst & ERP Solutions Expert</p>
-    <div style="margin-top: 20px;">
-        <a href="https://github.com/v1shalraj" target="_blank" style="color:#38bdf8; text-decoration:none; font-weight:bold;">GitHub</a> • 
-        <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" style="color:#38bdf8; text-decoration:none; font-weight:bold;">LinkedIn</a>
-    </div>
+    <p>Data Scientist & Business Intelligence Specialist</p>
 </header>
 
 <section id="about">
     <div class="card">
         <h2>👋 About Me</h2>
-        <p>
-            I specialize in transforming complex business data into actionable insights. By bridging the gap between <b>Full-Stack Development</b> and <b>Data Science</b>, I build custom tools that automate workflows and provide real-time Profit & Loss visualization. My goal is to help businesses make data-driven decisions that save time and money.
-        </p>
-    </div>
-</section>
-
-<section id="skills">
-    <div class="card">
-        <h2>🛠 Technical Stack</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-            <div>
-                <h4>Data Science</h4>
-                <p>Python (Pandas, Scikit-learn), SQL, Power BI, Excel Analytics</p>
-            </div>
-            <div>
-                <h4>Development</h4>
-                <p>React Native, Firebase, NoSQL, HTML/CSS/JavaScript</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="experience">
-    <div class="card">
-        <h2>💼 Professional Experience</h2>
-
-        <h3>Data Analyst Intern – SCALEUP</h3>
-        <p><i>Nov 2024 – Mar 2025 | Calicut</i></p>
-        <ul>
-            <li>Engineered a high-traffic daily reporting application to centralize business operations.</li>
-            <li>Optimized data pipelines, improving data cleaning speed for weekly stakeholder reports.</li>
-        </ul>
-
-        <h3>Data Scientist Intern – DATASPARK</h3>
-        <p><i>Jun 2023 – Mar 2024 | Calicut</i></p>
-        <ul>
-            <li>Developed and deployed predictive ML models using Python & Streamlit.</li>
-            <li>Conducted exploratory data analysis (EDA) to identify key performance drivers for retail clients.</li>
-        </ul>
+        <p>Aspiring data professional with a strong foundation in data analytics, machine learning, and programming. I specialize in bridging the gap between raw data and business intelligence by building custom software solutions.</p>
     </div>
 </section>
 
 <section id="projects">
-    <h2 style="text-align:center; border:none; padding:0;">📊 Featured Projects</h2>
+    <h2 style="text-align:center; font-size: 2rem; margin-bottom: 40px;">📊 Featured Projects</h2>
 
     <div class="card">
-        <div class="project-container">
-            <div class="project-text">
-                <h3>Rare Piston - Enterprise BI Solution 🏍️</h3>
-                <p><b>Impact:</b> Replaced legacy paid software, reducing annual operational costs by ₹12,000.</p>
-                <ul>
-                    <li>Developed a custom <b>P&L Engine</b> that aggregates service, spare parts, and labor costs for real-time margin tracking.</li>
-                    <li>Integrated <b>Cloud Firebase</b> for cross-device synchronization and secure inventory logging.</li>
-                </ul>
-                <div style="margin: 20px 0;">
-                    <span class="tag">React Native</span> <span class="tag">Firebase</span> <span class="tag">Cloud NoSQL</span>
-                </div>
-                <a href="https://github.com/v1shalraj/Rare_piston" target="_blank" class="btn">View Technical Architecture</a>
-            </div>
-            <div class="project-gallery">
-                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston1.png" alt="Dashboard Core Metrics">
-                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston2.png" alt="Inventory Management View">
-                <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston3.png" alt="Profit & Loss Report">
-            </div>
+        <h3>Rare Piston - Showroom ERP & Analytics 🏍️</h3>
+        <p>Developed a custom Business Intelligence (BI) system to replace paid ERP software, saving ₹12,000/year. Features a real-time Profit & Loss engine.</p>
+        <div class="tag-container">
+            <span class="tag">React Native</span> <span class="tag">Firebase</span> <span class="tag">Analytics</span>
         </div>
+        <div class="project-gallery">
+            <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston1.png" alt="Rare Piston Dashboard 1">
+            <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston2.png" alt="Rare Piston Dashboard 2">
+            <img src="https://raw.githubusercontent.com/v1shalraj/Rare_piston/main/rare_piston3.png" alt="Rare Piston Dashboard 3">
+        </div>
+        <a href="https://github.com/v1shalraj/Rare_piston" target="_blank" class="btn">View Source Code</a>
     </div>
 
     <div class="card">
-        <h3>Predictive Analytics: Ticket Cancellation</h3>
-        <p>Engineered a classification model with <b>96.29% accuracy</b> to mitigate revenue loss from cancellations.</p>
-        <span class="tag">Scikit-learn</span> <span class="tag">Random Forest</span> <span class="tag">Streamlit</span>
-        <br>
-        <a href="https://github.com/v1shalraj" target="_blank" class="btn btn-outline">Analyze Model</a>
+        <h3>AssentTag - Photo Sharing Privacy Media</h3>
+        <p>Developed an automatic tagging mechanism using Python aimed at enhancing privacy in social media platforms.</p>
+        <div class="tag-container">
+            <span class="tag">Python</span> <span class="tag">Automation</span> <span class="tag">Metadata</span>
+        </div>
+        <a href="#" class="btn">Learn More</a>
     </div>
-</section>
 
-<section id="resume">
-    <div class="card" style="text-align:center; background: #f1f5f9;">
-        <h2>📄 Career Summary</h2>
-        <p>Looking for my full resume? Download it below for a detailed look at my certifications and projects.</p>
-        <a href="Resume.jpeg" target="_blank" class="btn">👀 View Online</a>
-        <a href="Resume.jpeg" download class="btn" style="background:#38bdf8; color:#0f172a;">⬇ Download (.jpeg)</a>
-    </div>
-</section>
-
-<section id="contact">
     <div class="card">
-        <h2>📞 Let's Connect</h2>
-        <p>I'm currently open to Data Analyst and Junior Data Scientist roles.</p>
-        <p><b>Email:</b> vishalraaj725@gmail.com</p>
-        <p><b>Location:</b> Calicut, India</p>
-        <a href="https://www.linkedin.com/in/vishal-raj-006805217" target="_blank" class="btn">LinkedIn Profile</a>
+        <h3>Inventory Database Management</h3>
+        <p>Designed and implemented a database management system using Microsoft SQL Server for inventory tracking.</p>
+        <div class="tag-container">
+            <span class="tag">MS SQL Server</span> <span class="tag">Database Design</span>
+        </div>
+        <a href="#" class="btn">View Schema</a>
+    </div>
+</section>
+
+<section id="resume" style="text-align:center;">
+    <div class="card" style="background: #f1f5f9; border: 2px dashed #cbd5e1;">
+        <h2>📄 Resume</h2>
+        <p>View my full professional history and technical certifications.</p>
+        <a href="Resume.jpeg" target="_blank" class="btn">View Resume Online</a>
+        <a href="Resume.jpeg" download class="btn" style="background:#38bdf8; color:black;">Download (.jpeg)</a>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Vishal Raj | Data Driven Solutions</p>
+    <p>© 2026 Vishal Raj | Calicut, Kerala</p>
 </footer>
 
 </body>
